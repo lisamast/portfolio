@@ -7,17 +7,19 @@ import projects from "../projects.js";
 
 const ProjectsOverview = () => {
   return (
-    <section>
+    <section className='overview-section'>
       <Title text="Projects" />
 
-      {projects.map(project => (
-        <Link key={project.id} to={`/projectDetails/${project.id}`}>
-          <div>
-            <h2>{project.name}</h2>
-            <img src={project.imageUrl1} alt="" />
-          </div>
-        </Link>
-      ))}
+      <div className='overview-grid'>
+        {projects.map(project => (
+          <Link key={project.id} to={`/projectDetails/${project.id}`} className='overview-link'>
+            <div className='overview-div'>
+              <h2 className='overview-text'>{project.name}</h2>
+              <img src={project.imageUrl1} alt="" className='overview-img'/>
+            </div>
+          </Link>
+        ))}
+      </div>
     </section>
   );
 };

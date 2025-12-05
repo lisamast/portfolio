@@ -1,16 +1,16 @@
-const Header = () => {
-    return ( 
-       <nav>
-        <ul>
-            <li>Home</li>
-            <li>About me</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Contact</li>
+// const Header = () => {
+//     return ( 
+//        <nav>
+//         <ul>
+//             <li>Home</li>
+//             <li>About me</li>
+//             <li>Projects</li>
+//             <li>Skills</li>
+//             <li>Contact</li>
 
-        </ul>
-       </nav>
-    );
-}
+//         </ul>
+//        </nav>
+//     );
+// }
  
-export default Header;
+// export default Header;

@@ -2,11 +2,14 @@ import Title from "../components/Title";
 
 const AboutMe = () => {
     return (
-        <div>
+        <section className="about-section">
+            <div className="about-content">
             <Title text="About Me" />
-            <p>I am Lisa, I was born on November 23, 2007. I’m studying software development at Techniek College Rotterdam.</p>
-            <img src="./images/portfolio-foto.jpeg" alt="portfolio-foto" />
-        </div>
+            <p className="about-text">I am Lisa, I was born on November 23, 2007. I’m studying software development at Techniek College Rotterdam.</p>
+            </div>
+            
+            <img src="./images/portfolio-foto.jpeg" alt="portfolio-foto" className="about-img" />
+        </section>
     );
 }
  
