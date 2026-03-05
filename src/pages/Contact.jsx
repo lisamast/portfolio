@@ -19,7 +19,7 @@ const Contact = () => {
                     </p>
 
                     <p className="github">
-                        You can view my work on my <a href="https://github.com/dashboard" target="_blank" rel="">GitHub</a>
+                        You can view my work on my <a href="https://github.com/lisamast" target="_blank" rel="">GitHub</a>
                     </p>
                 </div>
             </div>

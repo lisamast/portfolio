@@ -11,7 +11,7 @@ import Navigation from './pages/Navigation';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio/">
         <Navigation/>
       <Routes>
         <Route index element={<Home />} />
