@@ -44,6 +44,45 @@ const projects = [
     imageUrl3: './images/appdesign2.png',
     imageUrl4: './images/appdesign3.png',
   },
+    {
+    id: 5,
+    name: 'OOP project',
+    info: 'My first OOP project was also my first project in my second year. I created a website for a fictional theater.',
+    gitLink: 'https://gitlab.com/techniek-college-rotterdam/schiedam/2026/projects/oop-lisa-mischa/oopproject',
+    imageUrl1: './images/oop-1.png',
+    imageUrl2: './images/oop-2.png',
+  },
+    {
+    id: 5,
+    name: 'Offtrack',
+    info: 'For my last optional subject I worked with React Native to create a mobile app where people could log their trips. This was for practicing.',
+    gitLink: 'https://github.com/lisamast/OffTrack',
+    imageUrl1: './images/offtrack.png',
+    imageUrl2: './images/offtrack1.png',
+    imageUrl3: './images/offtrack2.png',
+    imageUrl4: './images/offtrack3.png',
+    imageUrl5: './images/offtrack4.png',
+  },
+    {
+    id: 5,
+    name: 'Docenten lunch app',
+    info: 'For my last optional subject I created an app for teachers to order lunch at school. I made this app in React Native for my exam.',
+    gitLink: 'https://github.com/lisamast/Docentenlunch',
+    imageUrl1: './images/lunch.jpg',
+    imageUrl2: './images/lunch1.jpg',
+    imageUrl3: './images/lunch2.jpg',
+    imageUrl4: './images/lunch3.jpg',
+    imageUrl5: './images/lunch4.jpg',
+
+  },
+    {
+    id: 5,
+    name: 'Barbershop',
+    info: 'The last project I made in my second year was for my practice exam. I created a website for a fictional barbershop. I used Next.js for this project.',
+    gitLink: 'https://github.com/lxuiejane/Barbershop-Examen',
+    imageUrl1: './images/barber1.png',
+    imageUrl2: './images/barber2.png',
+  },
 
 ];
 

@@ -21,6 +21,10 @@ const Skills = () => {
                 <h2 className="skills-title">Frameworks</h2>
                 <div className="skills-row">
                     <img src="./images/React.png" alt="react" className="skills-img" />
+                    <img src="./images/React-native.png" alt="react-native" className="skills-img" />
+                    <img src="./images/Nextjs.png" alt="nextjs" className="skills-img" />
+
+
                 </div>
             </div>
 
