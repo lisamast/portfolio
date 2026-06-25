@@ -22,9 +22,16 @@ const ProjectDetails = () => {
 
             <div className="details-card">
                 <div className="details-images">
-                    {project.images.map((image, index) => (
-                        <img key={image} src={image} alt={`${project.name} screenshot ${index + 1}`} className="details-img" />
-                    ))}
+                    {project.images
+                        .filter(image => /\d+\.(png|jpg|jpeg|webp|gif)$/i.test(image))
+                        .map((image, index) => (
+                            <img
+                                key={image}
+                                src={image}
+                                alt={`${project.name} screenshot ${index + 1}`}
+                                className="details-img"
+                            />
+                        ))}
                 </div>
 
                 <p className="details-text">{project.info}</p>
@@ -42,5 +49,5 @@ const ProjectDetails = () => {
         </section>
     );
 };
- 
+
 export default ProjectDetails;
