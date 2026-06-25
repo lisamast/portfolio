@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Title from '../components/Title.jsx';
 import projects from '../projects.js';
@@ -6,32 +5,42 @@ import projects from '../projects.js';
 const ProjectDetails = () => {
     const { projectid } = useParams();
     const navigate = useNavigate();
-    const [projectList, setProjectList] = useState(projects);
+    const project = projects.find(item => item.id === Number(projectid));
 
-    const project = projectList.find(p => p.id === Number(projectid));
     if (!project) {
-        return <div>Project not found!</div>
+        return (
+            <section className="details-section">
+                <Title text="Project not found" />
+                <button onClick={() => navigate('/projectsOverview')} className="btn">Back to projects</button>
+            </section>
+        );
     }
 
     return (
-        <section className='details-section'>
-            <Title text={project.name} />
+        <section className="details-section">
+            <Title text={project.name} subtitle={project.category} />
 
-            <div className='details-images'>
-            <img src={project.imageUrl2} alt="" className='details-img'/>
-            <img src={project.imageUrl3} alt="" className='details-img'/>
+            <div className="details-card">
+                <div className="details-images">
+                    {project.images.map((image, index) => (
+                        <img key={image} src={image} alt={`${project.name} screenshot ${index + 1}`} className="details-img" />
+                    ))}
+                </div>
+
+                <p className="details-text">{project.info}</p>
+
+                {project.gitLink && (
+                    <p className="github">
+                        View this project on <a href={project.gitLink} target="_blank" rel="noreferrer">GitHub</a>
+                    </p>
+                )}
+
+                <button onClick={() => navigate('/projectsOverview')} className="btn">
+                    Back to project overview
+                </button>
             </div>
-
-            <p className='details-text'>{project.info}</p>
-            <p className='github'>
-            Look at the website on my <a href={project.gitLink} target="_blank" rel="">GitHub</a>
-            </p>
-
-            <button onClick={() => navigate('/projectsOverview')} className='btn'>
-                Back to project overview
-            </button>
         </section>
     );
-}
+};
  
 export default ProjectDetails;

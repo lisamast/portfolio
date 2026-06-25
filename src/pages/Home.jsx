@@ -1,21 +1,32 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     return (
         <section className="home-section">
-            <img src="./images/portfolio-foto.jpeg" alt="portfolio-foto" className="home-img" />
+            <div className="home-card">
+                <img src="./images/portfolio-foto.jpeg" alt="Lisa Mast" className="home-img" />
 
-            <div className="home-text">
-                <h1 className="home-title">Hi, Welcome to my portfolio Website</h1>
-                <h2 className="home-subtitle">I am Lisa Mast, Full stack software developer.</h2>
+                <div className="home-text">
+                    <p className="small-title">Software development student</p>
+                    <h1 className="home-title">Hi, welcome to my portfolio.</h1>
+                    <p className="home-subtitle">
+                        I am Lisa Mast, a motivated fullstack software development student at Techniek College Rotterdam.
+                    </p>
 
-                <button onClick={() => navigate('/projectsOverview')} className="btn">
-                    Take a look at my projects
-                </button>
+                    <div className="home-buttons">
+                        <button onClick={() => navigate('/projectsOverview')} className="btn">
+                            View my projects
+                        </button>
+                        <button onClick={() => navigate('/contact')} className="btn btn-light">
+                            Contact me
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     );
-}
+};
 
 export default Home;

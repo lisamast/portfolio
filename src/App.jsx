@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
@@ -8,11 +8,10 @@ import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Navigation from './pages/Navigation';
 
-
 function App() {
   return (
     <BrowserRouter basename="/portfolio/">
-        <Navigation/>
+      <Navigation />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/aboutMe" element={<AboutMe />} />

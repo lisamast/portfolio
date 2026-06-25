@@ -1,49 +1,58 @@
-import Title from "../components/Title";
+import Title from '../components/Title';
+
+const skillGroups = [
+    {
+        title: 'Programming languages',
+        skills: [
+            { name: 'HTML', image: './images/html.png' },
+            { name: 'CSS', image: './images/css.png' },
+            { name: 'JavaScript', image: './images/javascript.png' },
+            { name: 'PHP', image: './images/php.png' },
+            { name: 'SQL', image: './images/sql.png' },
+        ],
+    },
+    {
+        title: 'Frameworks',
+        skills: [
+            { name: 'React', image: './images/React.png' },
+            { name: 'React Native', image: './images/React-native.png' },
+            { name: 'Next.js', image: './images/Nextjs.png' },
+        ],
+    },
+    {
+        title: 'Design and working method',
+        skills: [
+            { name: 'Figma', image: './images/figma.png' },
+            { name: 'Scrum', image: './images/scrum.png' },
+        ],
+    },
+];
 
 const Skills = () => {
     return (
         <section className="skills-section">
-            <Title text="Skills" />
-            <section className="skills-container">
-            <div className="skills-block">
-                <h2 className="skills-title">Programming languages</h2>
-                <div className="skills-row">
-                    <img src="./images/html.png" alt="html" className="skills-img" />
-                    <img src="./images/css.png" alt="css" className="skills-img" />
-                    <img src="./images/javascript.png" alt="javascript" className="skills-img" />
-                    <img src="./images/php.png" alt="php" className="skills-img" />
-                    <img src="./images/sql.png" alt="sql" className="skills-img" />
-                </div>
+            <Title
+                text="Skills"
+                subtitle="The techniques and tools I have used during my education and projects."
+            />
+
+            <div className="skills-container">
+                {skillGroups.map(group => (
+                    <div className="skills-block" key={group.title}>
+                        <h2 className="skills-title">{group.title}</h2>
+                        <div className="skills-row">
+                            {group.skills.map(skill => (
+                                <div className="skill-item" key={skill.name}>
+                                    <img src={skill.image} alt={skill.name} className="skills-img" />
+                                    <span>{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
-
-
-            <div className="skills-block">
-                <h2 className="skills-title">Frameworks</h2>
-                <div className="skills-row">
-                    <img src="./images/React.png" alt="react" className="skills-img" />
-                    <img src="./images/React-native.png" alt="react-native" className="skills-img" />
-                    <img src="./images/Nextjs.png" alt="nextjs" className="skills-img" />
-
-
-                </div>
-            </div>
-
-            <div className="skills-block">
-                <h2 className="skills-title">Design</h2>
-                <div className="skills-row">
-                    <img src="./images/figma.png" alt="figma" className="skills-img" />
-                </div>
-            </div>
-
-            <div className="skills-block">
-                <h2 className="skills-title">Communication</h2>
-                <div className="skills-row">
-                    <img src="./images/scrum.png" alt="scrum" className="skills-img" />
-                </div>
-            </div>
-            </section>
         </section>
     );
-}
+};
 
 export default Skills;
