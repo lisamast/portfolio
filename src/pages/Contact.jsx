@@ -14,8 +14,9 @@ const Contact = () => {
                 <div className="contact-right">
                     <h2>Contact details</h2>
                     <p className="contact-info">
-                        Phone number: <a href="tel:+31646451759">+31 6 4645 1759</a><br />
-                        Email: <a href="mailto:9027431@student.zadkine.nl">9027431@student.zadkine.nl</a>
+                        {/* Phone number: <a href="tel:+31646451759">+31 6 4645 1759</a><br /> */}
+                        School email: <a href="mailto:9027431@student.zadkine.nl">9027431@student.zadkine.nl</a> <br />
+                        Personal email: <a href="mailto:lisa.mast01@gmail.com">lisa.mast01@gmail.com</a>
                     </p>
 
                     <p className="github">
